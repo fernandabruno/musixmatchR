@@ -1,9 +1,12 @@
 Package: musixmatchR
-Title: What the Package Does (one line, title case)
+Title: R Wrapper for MusixMatch metadata from songs, artists and lyrics.
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Author: Fernanda Bruno <fernanda.brunobr@gmail.com>
+Maintainer: Fernanda Bruno <fernanda.brunobr@gmail.com>
+Description: Gets metadata from songs, artists, bands and their lyrics.
 Depends: R (>= 3.4.2)
-License: What license is it under?
+License: CC0
 Encoding: UTF-8
 LazyData: true
+Imports: jsonlite
+RoxygenNote: 6.0.1
