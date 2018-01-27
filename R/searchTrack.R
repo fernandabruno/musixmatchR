@@ -26,7 +26,7 @@ searchTrack<-function(artist,song,apikey){
                     track_has_lyrics=data$message$body$track_list$track$has_lyrics,
                     track_richsync=data$message$body$track_list$track$has_richsync,
                     track_numfavs=data$message$body$track_list$track$num_favourite,
-                    nomealbum=data$message$body$track_list$track$album_name,
+                    album_name=data$message$body$track_list$track$album_name,
                     track_album_name=data$message$body$track_list$track$album_id,
                     track_release=data$message$body$track_list$track$first_release_date)
   return(metadata)
