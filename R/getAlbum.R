@@ -12,7 +12,7 @@
 
 getAlbum<-function(id_album,apikey){
   require(jsonlite)
-  data<-fromJSON(paste0(
+  data<-jsonlite::fromJSON(paste0(
     "http://api.musixmatch.com/ws/1.1/album.get?album_id=",id_album,"&apikey=",apikey))
 
   metadata<-data.frame(artist_id=data$message$body$album$artist_id,
