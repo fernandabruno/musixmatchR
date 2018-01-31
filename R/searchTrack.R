@@ -15,7 +15,7 @@ searchTrack<-function(artist,song,apikey){
   require(jsonlite)
   artist<-gsub(" ", "%20", artist)
   song<-gsub(" ", "%20", song)
-  data<-fromJSON(paste0(
+  data<-jsonlite::fromJSON(paste0(
     "http://api.musixmatch.com/ws/1.1/track.search?q_artist=",artist,"&q_track=",song,"&apikey=",apikey))
 
   metadata<-data.frame(track_id=data$message$body$track_list$track$track_id,
