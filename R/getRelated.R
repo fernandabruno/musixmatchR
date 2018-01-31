@@ -13,7 +13,7 @@
 getRelated<-function(artist_id,apikey){
   require(jsonlite)
   artist<-gsub(" ", "%20", artist_id)
-  data<-fromJSON(paste0(
+  data<-jsonlite::fromJSON(paste0(
     "http://api.musixmatch.com/ws/1.1/artist.related.get?artist_id=",artist,"&apikey=",apikey))
 
   metadata<-data.frame(artist_id=data$message$body$artist_list$artist$artist_id,
