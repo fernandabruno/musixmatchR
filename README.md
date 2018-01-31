@@ -36,7 +36,7 @@ Let's give it a try.
 It searches Musixmatch database for a provided band, singer or artist.
 
 ```r
-artists <- getArtist("Taylor Swift",apikey)
+artists <- searchArtist("Taylor Swift",apikey)
 |    artist_id |                          artist_name  |artist_country|artist_rating|twiter_url
 |1     259675  |                       Taylor Swift    |         US   |        95   |https://twitter.com/taylorswift13
 |2   24451377  |                テイラー・スウィフト         |              |        17   |
