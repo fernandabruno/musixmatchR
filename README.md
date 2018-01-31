@@ -18,6 +18,7 @@ To get **musixmatchR** running, you have to use **devtools** since it is not ava
 ```r
 library(devtools)
 install_github("fernandabruno/musixmatchR")
+library(musixmatchR)
 ```
 To make the package simpler to use, it is important that you create an object called *apikey* to store your API Key and to use it as a parameter as you call the functions.
 For example:
