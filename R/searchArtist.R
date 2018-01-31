@@ -13,7 +13,7 @@
 searchArtist<-function(artist,apikey){
   require(jsonlite)
   artist<-gsub(" ", "%20", artist)
-  data<-fromJSON(paste0(
+  data<-jsonlite::fromJSON(paste0(
     "http://api.musixmatch.com/ws/1.1/artist.search?q_artist=",artist,"&apikey=",apikey))
 
   metadata<-data.frame(artist_id=data$message$body$artist_list$artist$artist_id,
