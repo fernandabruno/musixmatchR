@@ -11,7 +11,7 @@
 
 getLyrics<-function(id_track,apikey){
   require(jsonlite)
-  metadata<-fromJSON(paste0(
+  metadata<-jsonlite::fromJSON(paste0(
     "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=",id_track,"&apikey=",apikey))
 
   tracks<-data.frame(track_id=id_track,
