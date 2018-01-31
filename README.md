@@ -107,6 +107,6 @@ I created a Comparison Cloud based on words that are present on the early Taylor
 <center><img src="examples/taylorcloud.png" alt="Comparison Cloud New Taylor x Old Taylor" style="width: 600px;"/></center>
 
 Another cool approach is combining data from MusixMatch and Spotify API. What about checking if the old Taylor is dead?
-Let's use Valence to get the answer. Valence describes whether something is likely to make someone feel happy or sad. So... What about new Taylor Swift's songs? Using valence metadata from Taylor songs on, it looks like the old Taylor is, in fact, dead. Or isn't she? 
+Let's use Valence to get the answer. Valence describes whether something is likely to make someone feel happy or sad. So... What about new Taylor Swift's songs? Using valence metadata from Taylor songs, it looks like the old Taylor is, in fact, dead. Or isn't she? 
 
 <center><img src="examples/valence.png" alt="Joyplot of Taylor Swifts songs from official albums" style="width: 600px;"/></center>
