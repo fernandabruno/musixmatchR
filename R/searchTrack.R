@@ -28,6 +28,8 @@ searchTrack<-function(artist,song,apikey){
                     track_numfavs=data$message$body$track_list$track$num_favourite,
                     album_name=data$message$body$track_list$track$album_name,
                     track_album_name=data$message$body$track_list$track$album_id,
-                    track_release=data$message$body$track_list$track$first_release_date)
+                    track_release=data$message$body$track_list$track$first_release_date,
+                    genre_primary=data$message$body$track_list$track$primary_genres$music_genre_list[[2]]$music_genre$music_genre_name
+                   )
   return(metadata)
 }
