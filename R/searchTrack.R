@@ -10,6 +10,7 @@
 #' apikey="YOUR_API_KEY"
 #' searchTrack("Taylor Swift","Blank Space",apikey)
 
+searchTrack<-function(artist,song,apikey){
 
 artist<-gsub(" ", "%20", artist)
   song<-gsub(" ", "%20", song)
