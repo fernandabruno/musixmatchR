@@ -28,7 +28,7 @@ searchTrack<-function(artist,song,apikey){
                        album_name=data$message$body$track_list$track$album_name,
                        track_album_name=data$message$body$track_list$track$album_id,
                        track_release=data$message$body$track_list$track$first_release_date,
-                       genre_list=data$message$body$track_list$track$primary_genres$music_genre_list[[1]]$music_genre$music_genre_name,
+                       genre_list=data$message$body$track_list$track$primary_genres$music_genre_list[[1]]$music_genre$music_genre_name[1],
                        stringsAsFactors = FALSE)
   return(metadata)
   
