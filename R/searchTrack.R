@@ -18,18 +18,16 @@ searchTrack<-function(artist,song,apikey){
     "http://api.musixmatch.com/ws/1.1/track.search?q_artist=",artist,"&q_track=",song,"&apikey=",apikey))
   
   
-  metadata<-data.frame(track_id=data$message$body$track_list$track$track_id,
-                       nomes=data$message$body$track_list$track$track_name,
-                       track_rating=data$message$body$track_list$track$track_rating,
-                       track_length=data$message$body$track_list$track$track_length,
-                       track_has_lyrics=data$message$body$track_list$track$has_lyrics,
-                       track_richsync=data$message$body$track_list$track$has_richsync,
-                       track_numfavs=data$message$body$track_list$track$num_favourite,
+  metadata<-data.frame(track_id=unlist(data$message$body$track_list$track$track_id),
+                       track_name=data$message$body$track_list$track$track_name,
                        album_name=data$message$body$track_list$track$album_name,
-                       track_album_name=data$message$body$track_list$track$album_id,
-                       track_release=data$message$body$track_list$track$first_release_date,
-                       #genre_list=data$message$body$track_list$track$primary_genres$music_genre_list[[1]]$music_genre$music_genre_name[1],
+                       album_id=data$message$body$track_list$track$album_id,
+                       artist_name=data$message$body$track_list$track$artist_name,
+                       artist_id=data$message$body$track_list$track$artist_id,
+                       track_rating=data$message$body$track_list$track$track_rating,
+                       track_has_lyrics=data$message$body$track_list$track$has_lyrics,
+                       track_numfavourite=data$message$body$track_list$track$num_favourite,
+                       explicit=data$message$body$track_list$track$explicit,
                        stringsAsFactors = FALSE)
   return(metadata)
-  
-}
+  }
